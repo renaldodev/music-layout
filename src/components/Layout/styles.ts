@@ -1,19 +1,14 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  max-width:1300px;
-  width:1300px;
-  height:100vh;
-  display: grid;
-  grid-template-columns: 220px auto;
-  position:relative;
-  overflow: hidden;
-  grid-template-areas:
-    "LB CC"
-    "LB CC"
-    "LB CC";
-
-    &::before {
+     max-width:1300px;
+     width:100%;
+     height: 100vh;
+     margin:0 auto;
+     display:grid;
+     grid-template-columns: min(220px,100%) auto;
+     
+     &::before {
     --offset: 50px;
 
     content: "";
@@ -26,8 +21,6 @@ export const Container = styled.div`
     filter: blur(var(--offset));
     background: inherit;
     z-index:-1;
-  }
-  * >{
-    position: relative;
+    /* border-radius: var(--br); */
   }
 `;
